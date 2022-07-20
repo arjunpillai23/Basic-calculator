@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>calculator</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="form-container" bgcolor = "peach">
+		<h1><marque>Calculator</marque></h1>
+		<div class="input-container">
+			<input type="number" id="num1" placeholder="ENTER VALUE 1">
+		
+		</div>
+		<div class="input-container">
+			<input type="number" id="num2" placeholder="ENTER VALUE 2">
+		
+		</div>
+		<div>
+			<button onclick="add()">ADD</button>
+			<button onclick="sub()">SUB</button>
+			<button onclick="mul()">mul</button>
+			<button onclick="div()">DIV</button>
+		</div>
+		<div class="result-container" id = "res-holder">
+			0
+		</div>
+	</div>
+<script type="text/javascript">
+	function add()
+	{
+		var x = parseFloat(document.getElementById("num1").value);
+		var y = parseFloat(document.getElementById("num2").value);
+		var z = x + y;
+		var result = z.toFixed(2);
+		document.getElementById("res-holder").innerHTML = result;
+
+	}
+	function sub()
+	{
+		var x = parseFloat(document.getElementById("num1").value);
+		var y = parseFloat(document.getElementById("num2").value);
+		var z = x - y;
+		var result = z.toFixed(2);
+		document.getElementById("res-holder").innerHTML = result;
+
+	}
+	function mul()
+	{
+		var x = parseFloat(document.getElementById("num1").value);
+		var y = parseFloat(document.getElementById("num2").value);
+		var z = x * y;
+		var result = z.toFixed(2);
+		document.getElementById("res-holder").innerHTML = result;
+
+	}
+	function div()
+	{
+		var x = parseFloat(document.getElementById("num1").value);
+		var y = parseFloat(document.getElementById("num2").value);
+		var z = x / y;
+		var result = z.toFixed(2);
+		document.getElementById("res-holder").innerHTML = result;
+
+	}
+</script>
+</body>
+</html>
